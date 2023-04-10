@@ -1,11 +1,36 @@
 @page
 @model GerenTaref.RazorPages.Pages.Usuario.Index
-@{
-    ViewData["Title"] = "Index";
-}
 
-<h1>@ViewData["Title"]</h1>
+<h1 class="display-4">Usuarios Registrados</h1>
+
+<hr/>
+<td><a class="btn btn-success" asp-page="/Usuario/Create">Adicionar novo usuario</a></td>
+<hr/>
 
 <div>
-    
+    <table class="table table-bordered table-striped table-hover-custom">
+        <thead>
+            <tr>
+                <td>@Html.DisplayNameFor(model => model.UserModel[0].UsuarioID)</td>
+                <td>@Html.DisplayNameFor(model => model.UserModel[0].NomeCompleto)</td>
+                <td>@Html.DisplayNameFor(model => model.UserModel[0].Email)</td>
+                <td>@Html.DisplayNameFor(model => model.UserModel[0].Senha)</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var userModel in Model.UserModel)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(model => userModel.UsuarioID)</td>
+                    <td>@Html.DisplayFor(model => userModel.NomeCompleto)</td>
+                    <td>@Html.DisplayFor(model => userModel.Email)</td>
+                    <td>@Html.DisplayFor(model => userModel.Senha)</td>
+                    <td>
+                        <a asp-page="./Edit" asp-route-id="@userModel.UsuarioID">Alterar</a>
+                        <a asp-page="./Delete" asp-route-id="@userModel.UsuarioID">Remover</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </div>

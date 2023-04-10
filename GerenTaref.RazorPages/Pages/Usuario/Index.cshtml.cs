@@ -1,24 +1,25 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using GerenTaref.RazorPages.Data;
+using GerenTaref.RazorPages.Pages.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
 
 namespace GerenTaref.RazorPages.Pages.Usuario
 {
     public class Index : PageModel
     {
-        private readonly ILogger<Index> _logger;
-
-        public Index(ILogger<Index> logger)
+        private readonly AppDbContext _context;
+        public List<UsuarioModel> UserModel { get; set; } = new();
+        
+        public Index(AppDbContext context)
         {
-            _logger = logger;
+            _context = context;
         }
 
-        public void OnGet()
+        public async Task<IActionResult> OnGetAsync()
         {
+            UserModel = await _context.Usuarios!.ToListAsync();
+            return Page();
         }
     }
 }
