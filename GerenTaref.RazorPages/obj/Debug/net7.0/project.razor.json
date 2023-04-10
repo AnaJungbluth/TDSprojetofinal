@@ -18645,8 +18645,23 @@
   "RootNamespace": "GerenTaref.RazorPages",
   "Documents": [
     {
+      "FilePath": "d:\\GitHub\\pratica_tds\\GerenTaref.RazorPages\\Pages\\Projeto\\Index.cshtml",
+      "TargetPath": "Pages\\Projeto\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\GitHub\\pratica_tds\\GerenTaref.RazorPages\\Pages\\Tarefa\\Index.cshtml",
+      "TargetPath": "Pages\\Tarefa\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\GitHub\\pratica_tds\\GerenTaref.RazorPages\\Pages\\Shared\\_MainMenuPartialPage.cshtml",
       "TargetPath": "Pages\\Shared\\_MainMenuPartialPage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\GitHub\\pratica_tds\\GerenTaref.RazorPages\\Pages\\Usuario\\Index.cshtml",
+      "TargetPath": "Pages\\Usuario\\Index.cshtml",
       "FileKind": "mvc"
     },
     {

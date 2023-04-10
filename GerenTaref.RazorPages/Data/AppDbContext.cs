@@ -12,6 +12,7 @@ namespace GerenTaref.RazorPages.Data {
             => options.UseSqlite("DataSource=tds.db;Cache=Shared");
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
+            
             modelBuilder.Entity<UsuarioModel>().ToTable("Usuarios").HasKey(l => l.UsuarioID);
             modelBuilder.Entity<UsuarioModel>().Property(o => o.UsuarioID).ValueGeneratedOnAdd();
             
