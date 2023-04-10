@@ -9,29 +9,29 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = GerenTaref.RazorPages
 build_property.RootNamespace = GerenTaref.RazorPages
-build_property.ProjectDir = D:\GitHub\pratica_tds\GerenTaref.RazorPages\
+build_property.ProjectDir = d:\GitHub\pratica_tds\GerenTaref.RazorPages\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\GitHub\pratica_tds\GerenTaref.RazorPages
+build_property.MSBuildProjectDirectory = d:\GitHub\pratica_tds\GerenTaref.RazorPages
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/GitHub/pratica_tds/GerenTaref.RazorPages/Pages/Index.cshtml]
+[d:/GitHub/pratica_tds/GerenTaref.RazorPages/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/pratica_tds/GerenTaref.RazorPages/Pages/Shared/_MainLayout.cshtml]
+[d:/GitHub/pratica_tds/GerenTaref.RazorPages/Pages/Shared/_MainLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9NYWluTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/pratica_tds/GerenTaref.RazorPages/Pages/Shared/_MainMenuPartialPage.cshtml]
+[d:/GitHub/pratica_tds/GerenTaref.RazorPages/Pages/Shared/_MainMenuPartialPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9NYWluTWVudVBhcnRpYWxQYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/pratica_tds/GerenTaref.RazorPages/Pages/_ViewImports.cshtml]
+[d:/GitHub/pratica_tds/GerenTaref.RazorPages/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/pratica_tds/GerenTaref.RazorPages/Pages/_ViewStart.cshtml]
+[d:/GitHub/pratica_tds/GerenTaref.RazorPages/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

@@ -1,34 +1,40 @@
 
+using GerenTaref.RazorPages.Pages.Model;
 using Microsoft.EntityFrameworkCore;
 
 namespace GerenTaref.RazorPages.Data {
     public class AppDbContext : DbContext
     {
-        //public DbSet<EventModel>? Events { get; set; }
-        //public DbSet<PlayerModel>? Players { get; set; }
+        public DbSet<UsuarioModel>? Usuarios { get; set; }
+        public DbSet<ProjetoModel>? Projetos { get; set; }
+        public DbSet<TarefaModel>? Tarefas { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
             => options.UseSqlite("DataSource=tds.db;Cache=Shared");
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
-            // modelBuilder.Entity<EventModel>().ToTable("Eventos").HasKey(e => e.EventID);
-            // modelBuilder.Entity<EventModel>().Property(e => e.EventID).ValueGeneratedOnAdd();
+            modelBuilder.Entity<UsuarioModel>().ToTable("Usuarios").HasKey(l => l.UsuarioID);
+            modelBuilder.Entity<UsuarioModel>().Property(o => o.UsuarioID).ValueGeneratedOnAdd();
             
-            // modelBuilder.Entity<PlayerModel>().ToTable("Jogadores").HasKey(j => j.PlayerID);
-            // modelBuilder.Entity<PlayerModel>().Property(p => p.PlayerID).ValueGeneratedOnAdd();
+            modelBuilder.Entity<ProjetoModel>().ToTable("Projetos").HasKey(i => i.ProjetoID);
+            modelBuilder.Entity<ProjetoModel>().Property(j => j.ProjetoID).ValueGeneratedOnAdd();
 
-            // modelBuilder.Entity<EventModel>()
-            //     .HasMany(e => e.Players)
-            //     .WithMany()
-            //     .UsingEntity<Dictionary<string, object>>(
-            //         "EventoJogador",
-            //         j => j.HasOne<PlayerModel>().WithMany().HasForeignKey("PlayerID"),
-            //         e => e.HasOne<EventModel>().WithMany().HasForeignKey("EventID"),
-            //         eJ =>
-            //         {
-            //             eJ.HasKey("EventID", "PlayerID");
-            //             eJ.ToTable("EventoJogador");
-            //         }
-            //     );
+            modelBuilder.Entity<ProjetoModel>()
+                .HasOne(e => e.Responsavel)
+                .WithMany()
+                .HasForeignKey("UsuarioID");
+
+            modelBuilder.Entity<TarefaModel>().ToTable("Tarefas").HasKey(n => n.TarefaID);
+            modelBuilder.Entity<TarefaModel>().Property(m => m.TarefaID).ValueGeneratedOnAdd();
+
+            modelBuilder.Entity<TarefaModel>()
+                .HasOne(e => e.Responsavel)
+                .WithMany()
+                .HasForeignKey("UsuarioID");
+            
+            modelBuilder.Entity<TarefaModel>()
+                .HasOne(e => e.Projeto)
+                .WithMany()
+                .HasForeignKey("ProjetoID");
         }
     }
 }  

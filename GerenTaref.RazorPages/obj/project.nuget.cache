@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "e79uAbWRF1SmWJZUrvUmLAN0nqTEVP0UJFvCBJlGX27HI2sMfFVHIOQvbNjVjBNczyYSm9/+uQBx4UX+aX9GBQ==",
+  "dgSpecHash": "ogWwUnxxB4Jx40meYdaJirWb9k+0rNmAZZWUV3RVX2czuSzDmgFgtNohsH7TxgR8Io7oSnhle6vNwt6XSXI4hQ==",
   "success": true,
-  "projectFilePath": "D:\\GitHub\\pratica_tds\\GerenTaref.RazorPages\\GerenTaref.RazorPages.csproj",
+  "projectFilePath": "d:\\GitHub\\pratica_tds\\GerenTaref.RazorPages\\GerenTaref.RazorPages.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\danib\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\danib\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.4\\microsoft.data.sqlite.core.7.0.4.nupkg.sha512",
