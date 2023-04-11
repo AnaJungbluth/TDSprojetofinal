@@ -11,6 +11,9 @@ namespace GerenTaref.RazorPages.Pages.Projeto
         private readonly AppDbContext _context;
         [BindProperty]
         public ProjetoModel ProjetoModel { get; set; } = new();
+        [BindProperty]
+        public int? IdUser { get; set; }
+        public List<UsuarioModel>? UserModel { get; set; }
         public Create(AppDbContext context)
         {
             _context = context;
@@ -20,6 +23,8 @@ namespace GerenTaref.RazorPages.Pages.Projeto
         {
             if(!ModelState.IsValid)
                 return Page();
+
+            ProjetoModel.Responsavel = await _context.Usuarios!.FindAsync(IdUser);
             
             try {
                 _context.Add(ProjetoModel);
@@ -28,6 +33,16 @@ namespace GerenTaref.RazorPages.Pages.Projeto
             } catch(DbUpdateException) {
                 return Page();
             }
+        }
+
+        public async Task<IActionResult> OnGetAsync() {
+            try {
+                UserModel = await _context.Usuarios!.ToListAsync();
+            } catch(DbUpdateException) {
+                return Page();
+            }
+
+            return Page();
         }
     }
 }

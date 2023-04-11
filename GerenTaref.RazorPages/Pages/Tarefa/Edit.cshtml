@@ -1,0 +1,92 @@
+@page "{id:int}"
+@model GerenTaref.RazorPages.Pages.Tarefa.Edit
+
+<style>
+    div{
+        justify-content: center;
+    }
+    h1{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 100px;
+        margin-top: 100px;
+        font-size: 60px;
+    }
+
+
+</style>
+
+<h1>Alterar Tarefa</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-dange"></div>
+            <input type="hidden" asp-for="TarModel.TarefaID">
+            <div class="form-group">
+                <label asp-for="TarModel.DataInicio">Data Ínicio</label>
+                <input asp-for="TarModel.DataInicio" class="form-control">
+                <span asp-validation-for="TarModel.DataInicio" class="text-dange"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TarModel.DataFinal">Data Final</label>
+                <input asp-for="TarModel.DataFinal" class="form-control">
+                <span asp-validation-for="TarModel.DataFinal" class="text-dange"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TarModel.EstadoTarefa">Estado Tarefa</label>
+                <select asp-for="TarModel.EstadoTarefa" class="form-control">
+                    @if(@Model.TarModel!.EstadoTarefa == "Aberta") {
+                        <option value="Aberta" selected>Aberta</option>
+                    } else {
+                        <option value="Aberta" >Aberta</option>
+                    }
+                    @if(@Model.TarModel!.EstadoTarefa == "Aberta") {
+                        <option value="Em andamento" selected>Em andamento</option>
+                    } else {
+                        <option value="Em andamento">Em andamento</option>
+                    }
+                    @if(@Model.TarModel!.EstadoTarefa == "Aberta") {
+                        <option value="Concluida" selected>Concluída</option>
+                    } else {
+                        <option value="Concluida">Concluída</option>
+                    }
+                </select>
+                <span asp-validation-for="TarModel.EstadoTarefa" class="text-dange"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdUser">Responsável</label>
+                <select asp-for="IdUser" type="number" class="form-control">
+                    @foreach (var userModel in Model.UserModel!)
+                    {  
+                        @if(@Model.IdUser == @userModel.UsuarioID) {
+                            <option value="@userModel.UsuarioID" selected>@userModel.NomeCompleto</option>
+                        } else {    
+                            <option value="@userModel.UsuarioID">@userModel.NomeCompleto</option>
+                        }
+                    }
+                </select>
+                <span asp-validation-for="IdUser" class="text-dange"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdProjeto">Responsável</label>
+                <select asp-for="IdProjeto" type="number" class="form-control">
+                    @foreach (var projModel in Model.ProjModel!)
+                    {  
+                        @if(@Model.IdProjeto == @projModel.ProjetoID) {
+                            <option value="@projModel.ProjetoID" selected>@projModel.Nome</option>
+                        } else {    
+                            <option value="@projModel.ProjetoID">@projModel.Nome</option>
+                        }
+                    }
+                </select>
+                <span asp-validation-for="IdProjeto" class="text-dange"></span>
+            </div>
+            <br/>
+            <div class="form-group">
+                <input type="submit" class="btn btn-success" value="Salvar"/>
+                <a asp-page="/Projeto/Index" class="btn btn-primary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>

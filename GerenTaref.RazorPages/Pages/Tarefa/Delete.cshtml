@@ -1,0 +1,46 @@
+@page "{id:int}"
+@model GerenTaref.RazorPages.Pages.Tarefa.Delete
+
+<style>
+    h1{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 100px;
+        margin-top: 100px;
+        font-size: 50px;
+    }
+    label{
+       display: grid;
+       justify-content: center;
+       margin-bottom: 30px;
+       font-size: 22px;
+    }
+
+    form{
+        display: flex;
+        justify-content: center;
+    }
+
+    form input{
+        margin-right: 30px;
+    }
+</style> 
+
+<div>
+    <h1>Detalhes da tarefa a ser removida</h1>
+    <label>
+        <p><strong>Data Ínicio:</strong> @Model.TarModel.DataInicio</p>
+        <p><strong>Data Final:</strong> @Model.TarModel.DataFinal</p>
+        <p><strong>Estado:</strong> @Model.TarModel.EstadoTarefa</p>
+        <p><strong>Projeto Associado:</strong> @Model.TarModel.Projeto!.Nome</p>
+        <p><strong>Responsável:</strong> @Model.TarModel.Responsavel!.NomeCompleto</p>
+    </label>
+    
+</div>
+
+<form method="post">
+    <div class="form-group">
+        <input type="submit" value="Deletar" class="btn btn-danger"/>
+        <a asp-page="/Tarefa/Index" class="btn btn-primary">Cancelar</a>
+    </div>
+</form>

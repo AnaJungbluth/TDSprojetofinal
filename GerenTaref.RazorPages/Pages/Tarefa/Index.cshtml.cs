@@ -25,7 +25,7 @@ namespace GerenTaref.RazorPages.Pages.Tarefa
                     .Include(k => k.Projeto)
                     .ToListAsync();
             } catch(Exception exp) {
-                _logger.LogError(exp, "Erro caralho");
+                _logger.LogError(exp, "Error");
             }
 
             return Page();

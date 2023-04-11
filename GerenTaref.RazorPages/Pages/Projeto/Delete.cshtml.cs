@@ -22,7 +22,7 @@ namespace GerenTaref.RazorPages.Pages.Projeto
                 return NotFound();
             }
 
-            var projetoModel = await _context.Projetos.FirstOrDefaultAsync(e => e.ProjetoID == id);
+            var projetoModel = await _context.Projetos.Include(p => p.Responsavel).FirstOrDefaultAsync(e => e.ProjetoID == id);
 
             if(projetoModel == null) {
                 return NotFound();

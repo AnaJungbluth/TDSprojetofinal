@@ -13,18 +13,26 @@ namespace GerenTaref.RazorPages.Pages.Tarefa
         public TarefaModel TarModel { get; set; } = new();
         public List<UsuarioModel>? UserModel { get; set; }
         public List<ProjetoModel>? ProjModel { get; set; }
-        public int idUser { get; set; }
-        public int idProjeto { get; set; }
+        [BindProperty]
+        public int? IdUser { get; set; }
+        [BindProperty]
+        public int? IdProjeto { get; set; }
         public Create(AppDbContext context)
         {
             _context = context;
         }
     
-        public async Task<IActionResult> OnPostAsync(int id)
+        public async Task<IActionResult> OnPostAsync()
         {
             if(!ModelState.IsValid)
                 return Page();
+
+            if(IdUser == null || IdProjeto == null)
+                return NotFound();
             
+            TarModel.Responsavel = await _context.Usuarios!.FindAsync(IdUser);
+            TarModel.Projeto = await _context.Projetos!.FindAsync(IdProjeto);
+
             try {
                 _context.Add(TarModel);
                 await _context.SaveChangesAsync();
@@ -35,11 +43,16 @@ namespace GerenTaref.RazorPages.Pages.Tarefa
         }
 
         public async Task<IActionResult> OnGetAsync() {
-            UserModel = await _context.Usuarios!.ToListAsync();
+            try{
+                UserModel = await _context.Usuarios!.ToListAsync();
+            } catch(DbUpdateException) {
+                return Page();
+            }
+            
             try{
                 ProjModel = await _context.Projetos!.ToListAsync();
-            } catch(Exception exp) {
-                
+            } catch(DbUpdateException) {
+                return Page();
             }
  
             return Page();

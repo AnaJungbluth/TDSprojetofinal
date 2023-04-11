@@ -1,4 +1,4 @@
-@page
+@page 
 @model GerenTaref.RazorPages.Pages.Tarefa.Create
 
 <h1>Criar nova Tarefa</h1>
@@ -9,33 +9,55 @@
             <div asp-validation-summary="ModelOnly" class="text-dange"></div>
             <input type="hidden" asp-for="TarModel.TarefaID">
             <div class="form-group">
-                <label asp-for="TarModel.DataInicio"></label>
-                <input asp-for="TarModel.DataInicio" type="date" class="form-control" asp-format="{dd/MM/yyyy}">
+                <label asp-for="TarModel.DataInicio">Data Inicial</label>
+                <input asp-for="TarModel.DataInicio" type="date" class="form-control" asp-format="{dd/MM/yyyy}" required>
                 <span asp-validation-for="TarModel.DataInicio" class="text-dange"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TarModel.DataFinal"></label>
-                <input asp-for="TarModel.DataFinal" type="date" class="form-control" asp-format="{dd/MM/yyyy}">
+                <label asp-for="TarModel.DataFinal">Data Final</label>
+                <input asp-for="TarModel.DataFinal" type="date" class="form-control" asp-format="{dd/MM/yyyy}" required>
                 <span asp-validation-for="TarModel.DataFinal" class="text-dange"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TarModel.EstadoTarefa"></label>
+                <label asp-for="TarModel.EstadoTarefa">Estado Tarefa</label>
                 <select asp-for="TarModel.EstadoTarefa" class="form-control">
-                    <option value="aberta">Aberta</option>
-                    <option value="em andamento">Em andamento</option>
-                    <option value="concluida">Concluída</option>
+                    <option value="Aberta">Aberta</option>
+                    <option value="Em andamento">Em andamento</option>
+                    <option value="Concluida">Concluída</option>
                 </select>
                 <span asp-validation-for="TarModel.EstadoTarefa" class="text-dange"></span>
             </div>
             <div class="form-group">
-                <label asp-for="idUser"></label>
-                <select asp-for="idUser" class="form-control">
-                    @foreach (var userModel in Model.UserModel!)
-                    {
-                        <option value="@userModel.UsuarioID">@userModel.NomeCompleto</option>
-                    }
-                </select>
-                <span asp-validation-for="idUser" class="text-dange"></span>
+                <label asp-for="IdUser" type="number">Responsável</label>
+                @if(Model.UserModel!.FirstOrDefault() == null) {
+                    <div>
+                        <label>Não há Usuarios!</label>
+                    </div>  
+                } else {
+                    <select asp-for="IdUser" type="number" class="form-control">
+                        @foreach (var userModel in Model.UserModel!)
+                        {
+                            <option value="@userModel.UsuarioID">@userModel.NomeCompleto</option>
+                        }
+                    </select>
+                }
+                <span asp-validation-for="IdUser" class="text-dange"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdProjeto" type="number">Projeto</label>
+                @if(Model.ProjModel!.FirstOrDefault() == null) {
+                    <div>
+                        <label>Não há projetos!</label>
+                    </div>    
+                } else {
+                    <select asp-for="IdProjeto" type="number" class="form-control">
+                        @foreach (var projModel in Model.ProjModel!)
+                        {
+                            <option value="@projModel.ProjetoID">@projModel.Nome</option>
+                        }
+                    </select>
+                }
+                <span asp-validation-for="IdProjeto" class="text-dange"></span>
             </div>
             <br/>
             <div class="form-group">
