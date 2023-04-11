@@ -6,13 +6,13 @@
 
     <p><strong>Nome:</strong> @Model.ProjetoModel.Nome</p>
     <p><strong>Email:</strong> @Model.ProjetoModel.Descricao</p>
-    <p><strong>Email:</strong> @Model.ProjetoModel.Responsavel</p>
+    <p><strong>Responsavel:</strong> @Model.ProjetoModel.Responsavel</p>
 
 </div>
 
 <form method="post">
     <div class="form-group">
         <input type="submit" value="Deletar" class="btn btn-danger"/>
-        <a asp-page="./Projeto/Index" class="btn btn-primary">Retornar</a>
+        <a asp-page="/Projeto/Index" class="btn btn-primary">Retornar</a>
     </div>
 </form>
