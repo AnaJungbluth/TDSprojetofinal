@@ -1,16 +1,45 @@
 @page "{id:int}"
 @model GerenTaref.RazorPages.Pages.Usuario.Delete
 
-<div>
-    <h1>Detalhes do usuario a ser removido</h1>
+<style>
+    h1{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 100px;
+        margin-top: 100px;
+        font-size: 50px;
+    }
+    label{
+       display: grid;
+       justify-content: center;
+       margin-bottom: 30px;
+       font-size: 22px;
+    }
 
-    <p><strong>Nome Completo:</strong> @Model.UserModel.NomeCompleto</p>
-    <p><strong>Email:</strong> @Model.UserModel.Email</p>
+    form{
+        display: flex;
+        justify-content: center;
+    }
+
+    form input{
+        margin-right: 30px;
+    }
+</style> 
+
+
+
+<div>
+    <h1>Detalhes do usuário a ser removido</h1>
+    <label for="">
+        <p><strong>Nome Completo:</strong> @Model.UserModel.NomeCompleto</p>
+        <p><strong>Email:</strong> @Model.UserModel.Email</p>
+    </label>
+    
 </div>
 
 <form method="post">
     <div class="form-group">
         <input type="submit" value="Deletar" class="btn btn-danger"/>
-        <a asp-page="/Usuario/Index" class="btn btn-primary">Retornar</a>
+        <a asp-page="/Usuario/Index" class="btn btn-primary">Cancelar</a>
     </div>
 </form>

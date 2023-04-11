@@ -1,10 +1,17 @@
 @page
 @model GerenTaref.RazorPages.Pages.Usuario.Index
 
-<h1 class="display-4">Usuarios Registrados</h1>
+<style>
+    .btn{
+        display: inline;
+        margin-left: 10px;
+    }
+</style>
+
+<h1 class="display-4">Usuários Registrados</h1>
 
 <hr/>
-<td><a class="btn btn-success" asp-page="/Usuario/Create">Adicionar novo usuario</a></td>
+<td><a class="btn btn-success" asp-page="/Usuario/Create" id="botão_inicial">Adicionar novo usuario</a></td>
 <hr/>
 
 <div>
