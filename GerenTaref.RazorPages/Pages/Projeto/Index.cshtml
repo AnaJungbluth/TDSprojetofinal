@@ -14,6 +14,10 @@
 <td><a class="btn btn-success" asp-page="/Projeto/Create">Adicionar novo projeto</a></td>
 <hr/>
 
+@if (TempData["ErroUser"] != null) {
+    <div class="alert alert-danger">@TempData["ErroUser"]</div>
+}
+
 <div>
     <table class="table table-bordered table-striped table-hover-custom">
         <thead>

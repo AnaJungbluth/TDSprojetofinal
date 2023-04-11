@@ -43,18 +43,20 @@ namespace GerenTaref.RazorPages.Pages.Tarefa
         }
 
         public async Task<IActionResult> OnGetAsync() {
-            try{
-                UserModel = await _context.Usuarios!.ToListAsync();
-            } catch(DbUpdateException) {
-                return Page();
+            UserModel = await _context.Usuarios!.ToListAsync();
+            
+            if (UserModel.Count == 0) {
+                TempData["ErroUser"] = "Não há usuários cadastrados!"; // define a mensagem na TempData
+                return RedirectToPage("/Tarefa/Index"); // redireciona para a página de índice
             }
             
-            try{
-                ProjModel = await _context.Projetos!.ToListAsync();
-            } catch(DbUpdateException) {
-                return Page();
+            ProjModel = await _context.Projetos!.ToListAsync();
+            
+            if (ProjModel.Count == 0) {
+                TempData["ErroProj"] = "Não há projeto cadastrado!"; // define a mensagem na TempData
+                return RedirectToPage("/Tarefa/Index"); // redireciona para a página de índice
             }
- 
+
             return Page();
         }
     }

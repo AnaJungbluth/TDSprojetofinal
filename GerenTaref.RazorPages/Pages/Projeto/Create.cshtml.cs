@@ -36,10 +36,11 @@ namespace GerenTaref.RazorPages.Pages.Projeto
         }
 
         public async Task<IActionResult> OnGetAsync() {
-            try {
-                UserModel = await _context.Usuarios!.ToListAsync();
-            } catch(DbUpdateException) {
-                return Page();
+            UserModel = await _context.Usuarios!.ToListAsync();
+
+            if (UserModel.Count == 0) {
+                TempData["ErroUser"] = "Não há usuários cadastrados!"; // define a mensagem na TempData
+                return RedirectToPage("/Projeto/Index"); // redireciona para a página de índice
             }
 
             return Page();
