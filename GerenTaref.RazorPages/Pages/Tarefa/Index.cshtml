@@ -1,11 +1,40 @@
 @page
 @model GerenTaref.RazorPages.Pages.Tarefa.Index
-@{
-    ViewData["Title"] = "Index";
-}
 
-<h1>@ViewData["Title"]</h1>
+<h1 class="display-4">Tarefas Registradas</h1>
+
+<hr/>
+<td><a class="btn btn-success" asp-page="/Tarefa/Create">Adicionar nova Tarefa</a></td>
+<hr/>
 
 <div>
-    
+    <table class="table table-bordered table-striped table-hover-custom">
+        <thead>
+            <tr>
+                <td>Tarefa ID</td>
+                <td>Data Ínicio</td>
+                <td>Data Final</td>
+                <td>Estado</td>
+                <td>Responsável</td>
+                <td>Projeto</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var tarModel in Model.TarModel)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(model => tarModel.TarefaID)</td>
+                    <td>@Html.DisplayFor(model => tarModel.DataInicio)</td>
+                    <td>@Html.DisplayFor(model => tarModel.DataFinal)</td>
+                    <td>@Html.DisplayFor(model => tarModel.EstadoTarefa)</td>
+                    <td>@Html.DisplayFor(model => tarModel.Responsavel!.NomeCompleto)</td>
+                    <td>@Html.DisplayFor(model => tarModel.Projeto!.Nome)</td>
+                    <td>
+                        <a asp-page="./Edit" asp-route-id="@tarModel.TarefaID">Alterar</a>
+                        <a asp-page="./Delete" asp-route-id="@tarModel.TarefaID">Remover</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </div>
