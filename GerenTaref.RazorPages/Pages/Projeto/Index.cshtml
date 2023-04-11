@@ -1,11 +1,37 @@
 @page
 @model GerenTaref.RazorPages.Pages.Projeto.Index
-@{
-    ViewData["Title"] = "Index";
-}
+ 
+<h1 class="display-4">Projetos Registrados</h1> 
 
-<h1>@ViewData["Title"]</h1>
+<hr/>
+<td><a class="btn btn-success" asp-page="/Projeto/Create">Adicionar novo projeto</a></td>
+<hr/>
 
 <div>
+    <table class="table table-bordered table-striped table-hover-custom">
+        <thead>
+            <tr>
+                <td>@Html.DisplayNameFor(model => model.ProjetoList[0].ProjetoID)</td>
+                <td>@Html.DisplayNameFor(model => model.ProjetoList[0].Nome)</td>
+                <td>@Html.DisplayNameFor(model => model.ProjetoList[0].Descricao)</td>
+                <td>@Html.DisplayNameFor(model => model.ProjetoList[0].Responsavel)</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var projetoModel in Model.ProjetoList){
+                <tr>
+                    <td>@Html.DisplayFor(model => projetoModel.ProjetoID)</td>
+                    <td>@Html.DisplayFor(model => projetoModel.Nome)</td>
+                    <td>@Html.DisplayFor(model => projetoModel.Descricao)</td>
+                    <td>@Html.DisplayFor(model => projetoModel.Responsavel)</td>
+                    <td> </td>
+                    <td>
+                        <a asp-page="./Edit" asp-route-id="@projetoModel.ProjetoID">Alterar</a>
+                        <a asp-page="./Delete" asp-route-id="@projetoModel.ProjetoID">Remover</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
     
 </div>
