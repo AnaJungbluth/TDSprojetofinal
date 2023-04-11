@@ -1,18 +1,44 @@
 @page "{id:int}"
 @model GerenTaref.RazorPages.Pages.Projeto.Delete
 
+<style>
+    h1{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 100px;
+        margin-top: 100px;
+        font-size: 50px;
+    }
+    label{
+       display: grid;
+       justify-content: center;
+       margin-bottom: 30px;
+       font-size: 22px;
+    }
+
+    form{
+        display: flex;
+        justify-content: center;
+    }
+
+    form input{
+        margin-right: 30px;
+    }
+</style> 
+
+
 <div>
     <h1>Detalhes do projeto a ser removido</h1>
-
-    <p><strong>Nome:</strong> @Model.ProjetoModel.Nome</p>
-    <p><strong>Email:</strong> @Model.ProjetoModel.Descricao</p>
-    <p><strong>Responsavel:</strong> @Model.ProjetoModel.Responsavel</p>
-
+    <label for="">
+         <p><strong>Nome do Projeto:</strong> @Model.ProjetoModel.Nome</p>
+        <p><strong>Descrição:</strong> @Model.ProjetoModel.Descricao</p>
+        <p><strong>Responsavel:</strong> @Model.ProjetoModel.Responsavel</p>
+    </label>
 </div>
 
 <form method="post">
     <div class="form-group">
         <input type="submit" value="Deletar" class="btn btn-danger"/>
-        <a asp-page="/Projeto/Index" class="btn btn-primary">Retornar</a>
+        <a asp-page="/Projeto/Index" class="btn btn-primary">Cancelar</a>
     </div>
 </form>

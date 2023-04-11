@@ -1,6 +1,13 @@
 @page
 @model GerenTaref.RazorPages.Pages.Projeto.Index
  
+<style>
+    .btn{
+        display: inline;
+        margin-left: 10px;
+    }
+</style>
+
 <h1 class="display-4">Projetos Registrados</h1> 
 
 <hr/>
@@ -26,8 +33,8 @@
                     <td>@Html.DisplayFor(model => projetoModel.Responsavel)</td>
                     <td> </td>
                     <td>
-                        <a asp-page="./Edit" asp-route-id="@projetoModel.ProjetoID">Alterar</a>
-                        <a asp-page="./Delete" asp-route-id="@projetoModel.ProjetoID">Remover</a>
+                        <a asp-page="./Edit" asp-route-id="@projetoModel.ProjetoID" class="btn btn-success" >Alterar</a>
+                        <a asp-page="./Delete" asp-route-id="@projetoModel.ProjetoID" class="btn btn-danger">Remover</a>
                     </td>
                 </tr>
             }
