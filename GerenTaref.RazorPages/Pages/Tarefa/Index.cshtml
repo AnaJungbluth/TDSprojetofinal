@@ -1,6 +1,13 @@
 @page
 @model GerenTaref.RazorPages.Pages.Tarefa.Index
 
+<style>
+    .btn{
+        display: inline;
+        margin-left: 10px;
+    }
+</style>
+
 <h1 class="display-4">Tarefas Registradas</h1>
 
 <hr/>
@@ -30,8 +37,8 @@
                     <td>@Html.DisplayFor(model => tarModel.Responsavel!.NomeCompleto)</td>
                     <td>@Html.DisplayFor(model => tarModel.Projeto!.Nome)</td>
                     <td>
-                        <a asp-page="./Edit" asp-route-id="@tarModel.TarefaID">Alterar</a>
-                        <a asp-page="./Delete" asp-route-id="@tarModel.TarefaID">Remover</a>
+                        <a asp-page="./Edit" asp-route-id="@tarModel.TarefaID" class="btn btn-success">Alterar</a>
+                        <a asp-page="./Delete" asp-route-id="@tarModel.TarefaID" class="btn btn-danger">Remover</a>
                     </td>
                 </tr>
             }
