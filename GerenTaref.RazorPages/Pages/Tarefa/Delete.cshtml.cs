@@ -24,7 +24,6 @@ namespace GerenTaref.RazorPages.Pages.Tarefa
 
             var tarModel = await _context.Tarefas!
                 .Include(p => p.Responsavel)
-                .Include(k => k.Projeto)
                 .FirstOrDefaultAsync(e => e.TarefaID == id);
 
             if(tarModel == null) {

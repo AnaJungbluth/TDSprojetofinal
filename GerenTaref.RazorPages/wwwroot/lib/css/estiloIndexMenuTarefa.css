@@ -1,0 +1,147 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+.menu{
+    width: 250px;
+    height: 100vh;
+    overflow: hidden;
+    margin-left: 0px;
+    background: #414141;
+    float: left;
+  }
+  
+  .header{  
+    padding: 20px 0px;
+    background-color: #2e2e2e;
+  }
+
+  .header a :hover{
+    color: #21dee2;
+  }
+  
+  h3{
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 1rem;
+  }
+  
+  .material-symbols-outlined{
+    font-size: 20px;
+    float: left;
+    color: #21dee2;
+    margin-right: 8px;
+  }
+  
+  .nav li{
+    transition: 1s all;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    padding: 15px;
+    margin-top: 0px;
+    border-bottom: 1px #2b2b2b solid;
+    color: #fff;
+    background-color: #373737;
+    list-style: none;
+    display: block;
+  }
+  
+  .nav li:last-child { border-bottom:0; }
+  
+  li:hover{
+    transition: 0.3s all;
+    color: #373737;
+    background-color: rgb(33, 214, 218);
+    font-weight: bold;
+    cursor: pointer;
+    .material-symbols-outlined{
+        color: #373737;
+        font-weight: bold;
+    }
+  }
+  
+  .nav > li { float:left; }
+  
+  .nav li ul{
+    background: #1E2B32;
+    display: none;
+    position: absolute;
+  }
+  
+  .nav li:hover > ul{
+    display: block;
+    cursor: pointer;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  .nav ul a li{
+    margin-left: -40px;
+  }
+
+  .nav{
+    margin-top: -20px;
+  }
+
+  #espaco{
+    margin-bottom: 40px;
+  }
+
+  .adicionar{
+    height: 96px;
+    background: #414141;
+    width: 100%;
+  }
+
+  /* Botão */
+  .btn {
+    display:inline-block;
+    width:100%;
+    height:auto;
+    position:relative;
+  }
+  
+  .btn-neon{ 
+    color:#21dee2;
+  }
+  
+  .btn-neon{
+    float:right;
+    display:flex;
+    padding:10px 15px;
+    font-size:1.2em;
+    margin-left:10px;
+    text-transform:uppercase;
+    text-decoration:none;
+    background:transparent;
+    outline:none;
+    cursor:pointer;
+    border:2px solid transparent;
+    border-radius:4px;
+    transition:400ms;
+    margin-right: 10px;
+    margin-top: 30px;
+  }
+  
+  .btn-neon:hover{
+    border: 2px solid;
+    box-shadow: 0 0 8px;
+  }
+  
+  .btn-neon:focus{
+    color:#000;
+    border: 2px solid #21dee2;
+    background:#21dee2;
+    box-shadow: 0 0 18px #21dee2;
+    #icone{
+      color: #000;
+    }
+  }
+
+ #icone{
+  color: #21dee2;
+ }
+

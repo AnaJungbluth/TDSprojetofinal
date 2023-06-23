@@ -22,7 +22,6 @@ namespace GerenTaref.RazorPages.Pages.Tarefa
             try {
                 TarModel = await _context.Tarefas!
                     .Include(p => p.Responsavel)
-                    .Include(k => k.Projeto)
                     .ToListAsync();
             } catch(Exception exp) {
                 _logger.LogError(exp, "Error");

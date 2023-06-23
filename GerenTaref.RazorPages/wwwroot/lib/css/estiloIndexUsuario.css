@@ -1,0 +1,82 @@
+/*Tabela*/
+.style-tabela table{border:1px solid #9b9b9b; border-bottom:0; border-right:0; font-size:0.8em; }
+.style-tabela table tr td  { padding:0.5em; border:1px solid #a7a7a7; border-top:0; border-left:0;}
+.style-tabela table td.top { background-color:#00bcc4; color:#fff; font-size:1.2em;}
+.style-tabela table td.top.center {text-align: center;}
+.style-tabela table td.total { text-align:left; font-weight: bold;}
+.style-tabela table td.top-toltip{ background-color:#207d97; height:25px;  color:#fff; font-size:16px;}
+.style-tabela tbody tr td    {padding:0.3em; border:1px solid #a0a0a0; border-top:0; border-left:0;}
+.style-tabela tbody tr       {background-color:#fff; color:#020202;}
+.style-tabela tbody tr:hover {background-color:#f4f4f4; color:#00bcc4;}
+ 
+
+.style-tabela tbody tr td .editar  { color:#00d549; font-size:1.2em; font-weight:bold; display:inline; text-decoration:none;} 
+.style-tabela tbody tr td .deletar { color:#bf303c; font-size:1.2em; font-weight:bold; display:inline; text-decoration:none; margin-left: 7px; }
+
+.style-tabela tbody tr.mensagemAlerta { background-color:#fdeeef; color:#bf303c;}
+
+#tabela tr:nth-child(odd)  { background-color:#dddddd; } 
+#tabela tr:nth-child(even) { background-color:#f4f4f4; } 
+
+#tabela tr{
+    font-size: medium;
+}
+
+#tabela{
+    width: 70%;
+}
+
+.style-tabela{
+    -webkit-display: flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#id{
+    width: 5%;
+}
+
+#nome{
+    width: 35%;
+}
+
+#email{
+    width: 35%;
+}
+
+#acao{
+    width: 8%;
+}
+
+.display-4{
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    color: #1a0ebe;
+}
+
+.menutarefa{
+    background: #555555;
+    padding: 8px;
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-top: 30px;
+    width: 90px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menutarefa a{
+    text-decoration: none;
+    color: #f4f4f4;
+}
+
+.menutarefa:hover{
+    background: #414141;
+    cursor: pointer;
+}

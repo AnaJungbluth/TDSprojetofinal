@@ -12,11 +12,10 @@ namespace GerenTaref.RazorPages.Pages.Tarefa
         [BindProperty]
         public TarefaModel TarModel { get; set; } = new();
         public List<UsuarioModel>? UserModel { get; set; }
-        public List<ProjetoModel>? ProjModel { get; set; }
+
         [BindProperty]
         public int? IdUser { get; set; }
-        [BindProperty]
-        public int? IdProjeto { get; set; }
+        
         public Create(AppDbContext context)
         {
             _context = context;
@@ -26,12 +25,8 @@ namespace GerenTaref.RazorPages.Pages.Tarefa
         {
             if(!ModelState.IsValid)
                 return Page();
-
-            if(IdUser == null || IdProjeto == null)
-                return NotFound();
             
             TarModel.Responsavel = await _context.Usuarios!.FindAsync(IdUser);
-            TarModel.Projeto = await _context.Projetos!.FindAsync(IdProjeto);
 
             try {
                 _context.Add(TarModel);
@@ -50,13 +45,6 @@ namespace GerenTaref.RazorPages.Pages.Tarefa
                 return RedirectToPage("/Tarefa/Index"); // redireciona para a página de índice
             }
             
-            ProjModel = await _context.Projetos!.ToListAsync();
-            
-            if (ProjModel.Count == 0) {
-                TempData["ErroProj"] = "Não há projeto cadastrado!"; // define a mensagem na TempData
-                return RedirectToPage("/Tarefa/Index"); // redireciona para a página de índice
-            }
-
             return Page();
         }
     }

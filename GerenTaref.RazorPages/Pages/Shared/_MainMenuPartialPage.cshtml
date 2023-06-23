@@ -1,61 +1,13 @@
-  <style>
-    * {
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  color: #fff;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-a:hover {
-  opacity: 0.7;
-}
-
-.logo {
-  font-size: 40px;
-  margin-left: -250px;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-}
-
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-  background: #23232e;
-  height: 8vh;
-}
-
-main {
-  background: url("bg.jpg") no-repeat center center;
-  background-size: cover;
-  height: 92vh;
-}
-
-.nav-list {
-  list-style: none;
-  display: flex;
-}
-
-.nav-list li {
-  letter-spacing: 3px;
-  margin-left: 32px;
-}
-
-  </style>
-  
-  
-  <header>
-      <nav>
-        <a class="logo" asp-page="/Index" >UTFPR</a>
-        <ul class="nav-list">
-            <li><a asp-page="/Usuario/Index" >Usuarios</a></li>
-            <li><a asp-page="/Projeto/Index">Projetos</a></li>
-            <li><a asp-page="/Tarefa/Index">Tarefas</a></li>
+<div>
+    <nav>
+        <ul class="menu">
+            <li class="logo"><a href="/Index">TaskAgenda</a></li>
+            <li class="item"><a href="/Index">INICIO</a></li>
+            <li class="item"><a href="/Funcionalidade">FUNCIONALIDADES</a></li>
+            <li class="item"><a href="/Duvida">DÚVIDAS</a></li></li>
+            <li class="item button"><a href="../Usuario/LoginUsuario" title="Entrar">Entrar</a></li>
+            <li class="item button secondary"><a href="../Usuario/Create" title="Cadastro">Criar conta</a></li>
+            <li class="toggle"><span class="bars"></span></li>
         </ul>
-      </nav>
-    </header>
+    </nav>
+</div>

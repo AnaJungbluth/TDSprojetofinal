@@ -1,0 +1,29 @@
+@page
+@model GerenTaref.RazorPages.Pages.Tarefa.TelasMenuTarefa.Hoje
+@{
+    Layout = "../Shared/_MainLayoutMenuTarefa.cshtml";
+}
+
+@if (TempData["ErroUser"] != null) {
+    <div class="alert alert-danger">@TempData["ErroUser"]</div>
+}
+
+@foreach (var tarModel in Model.TarModel)
+{
+    var taskDateTime = tarModel.DataFinal.HasValue ? tarModel.DataFinal.Value.Date : (DateTime?)null;
+   if (taskDateTime == DateTime.Now.Date && (tarModel.EstadoTarefa == "Aberta" || tarModel.EstadoTarefa == "Em andamento"))
+    {
+        <tr>
+            <td>@Html.DisplayFor(model => tarModel.EstadoTarefa)</td>
+            <td>@Html.DisplayFor(model => tarModel.Nome)</td>
+            <td>@Html.DisplayFor(model => tarModel.Nota)</td>
+            <td>@Html.DisplayFor(model => tarModel.Responsavel!.NomeCompleto)</td>
+            <td>@Html.DisplayFor(model => tarModel.DataFinal)</td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@tarModel.TarefaID" title="editar" ><span id="editar" class="material-symbols-outlined">edit</span></a>
+                <a asp-page="./Delete" asp-route-id="@tarModel.TarefaID" title="deletar"><span id="deletar" class="material-symbols-outlined">delete</span></a>
+            </td>
+        </tr>
+    }
+}
+

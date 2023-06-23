@@ -4,14 +4,7 @@ namespace GerenTaref.RazorPages.Pages
 {
     public class Index : PageModel
     {
-
-        public Index()
-        {
-            
-        }
-
-        public void OnGet()
-        {
-        }
+        public Index(){}
+        public void OnGet(){}
     }
 }

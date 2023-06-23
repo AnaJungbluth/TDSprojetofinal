@@ -1,0 +1,59 @@
+/*Tabela*/
+.style-tabela table{ margin-left: 250px; border:1px solid #8a8a8a; border-bottom:0; border-right:0; font-size:0.8em; }
+.style-tabela table tr td  { padding:0.5em; border:1px solid #919191; border-top:0; border-left:0;}
+.style-tabela table td.top { background-color:#41ced3; color:#fff; font-size:1.2em;}
+.style-tabela table td.top.center {text-align: center;}
+.style-tabela table td.total { text-align:left; font-weight: bold;}
+.style-tabela table td.top-toltip{ background-color:#28b7df; height:25px;  color:#fff; font-size:16px;}
+.style-tabela tbody tr td    {padding:0.3em; border:1px solid #a0a0a0; border-top:20px; border-left:0;}
+.style-tabela tbody tr       {background-color:#fff; color:#000000;}
+.style-tabela tbody tr:hover {background-color:#f4f4f4; color:#00bcc4;}
+ 
+
+.style-tabela tbody tr td #editar  { color:#00d549; font-size:1.2em; font-weight:bold; margin-right: 19px; margin-left: 8px; text-decoration:none;} 
+.style-tabela tbody tr td #deletar { color:#bf303c; font-size:1.2em; font-weight:bold; margin-right: 5px; text-decoration:none; }
+
+.style-tabela tbody tr.mensagemAlerta { background-color:#fdeeef; color:#bf303c;}
+
+/*Classe adicionada no jquery*/
+#tabela tr.impar { background:#f4f4f4;  }
+#tabela tr.par   { background:#f1fafb;  }
+
+
+#tabela tr:nth-child(odd)  { background-color:#ccc; } 
+#tabela tr:nth-child(even) { background-color:#f4f4f4; } 
+
+#tabela{
+    font-size: medium;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+#status{
+    width: 5%;
+}
+
+#nome{
+    width: 20%;
+}
+
+#nota{
+    width: 30%;
+    
+}
+
+#resp{
+    width: 25%;
+}
+
+#data{
+    width: 10%;
+}
+
+td:nth-child(3) {
+    word-break: break-all;
+}
+
+td:nth-child(2) {
+    word-break: break-all;
+}

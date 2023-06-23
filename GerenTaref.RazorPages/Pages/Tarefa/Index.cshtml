@@ -1,54 +1,28 @@
 @page
 @model GerenTaref.RazorPages.Pages.Tarefa.Index
-
-<style>
-    .btn{
-        display: inline;
-        margin-left: 10px;
-    }
-</style>
-
-<h1 class="display-4">Tarefas Registradas</h1>
-
-<hr/>
-<td><a class="btn btn-success" asp-page="/Tarefa/Create">Adicionar nova Tarefa</a></td>
-<hr/>
+@{
+    Layout = "./Shared/_MainLayoutMenuTarefa.cshtml";
+}
 
 @if (TempData["ErroUser"] != null) {
     <div class="alert alert-danger">@TempData["ErroUser"]</div>
 }
-@if (TempData["ErroProj"] != null) {
-    <div class="alert alert-danger">@TempData["ErroProj"]</div>
-}
 
-<div>
-    <table class="table table-bordered table-striped table-hover-custom">
-        <thead>
-            <tr>
-                <td>Tarefa ID</td>
-                <td>Data Ínicio</td>
-                <td>Data Final</td>
-                <td>Estado</td>
-                <td>Responsável</td>
-                <td>Projeto</td>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var tarModel in Model.TarModel)
-            {
-                <tr>
-                    <td>@Html.DisplayFor(model => tarModel.TarefaID)</td>
-                    <td>@Html.DisplayFor(model => tarModel.DataInicio)</td>
-                    <td>@Html.DisplayFor(model => tarModel.DataFinal)</td>
-                    <td>@Html.DisplayFor(model => tarModel.EstadoTarefa)</td>
-                    <td>@Html.DisplayFor(model => tarModel.Responsavel!.NomeCompleto)</td>
-                    <td>@Html.DisplayFor(model => tarModel.Projeto!.Nome)</td>
-                    <td>
-                        <a asp-page="./Edit" asp-route-id="@tarModel.TarefaID" class="btn btn-success">Alterar</a>
-                        <a asp-page="./Delete" asp-route-id="@tarModel.TarefaID" class="btn btn-danger">Remover</a>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
-</div>
+@foreach (var tarModel in Model.TarModel)
+{
+    if (tarModel.EstadoTarefa == "Aberta" || tarModel.EstadoTarefa == "Em andamento")
+    {
+        <tr>
+            <td>@Html.DisplayFor(model => tarModel.EstadoTarefa)</td>
+            <td>@Html.DisplayFor(model => tarModel.Nome)</td>
+            <td>@Html.DisplayFor(model => tarModel.Nota)</td>
+            <td>@Html.DisplayFor(model => tarModel.Responsavel!.NomeCompleto)</td>
+            <td>@Html.DisplayFor(model => tarModel.DataFinal)</td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@tarModel.TarefaID" title="editar" ><span id="editar" class="material-symbols-outlined">edit</span></a>
+                <a asp-page="./Delete" asp-route-id="@tarModel.TarefaID" title="deletar"><span id="deletar" class="material-symbols-outlined">delete</span></a>
+            </td>
+        </tr>
+    }
+}
+  

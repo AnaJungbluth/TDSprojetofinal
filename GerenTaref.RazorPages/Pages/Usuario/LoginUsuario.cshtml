@@ -1,0 +1,31 @@
+@page
+@model GerenTaref.RazorPages.Pages.Usuario.LoginUsuario
+@{
+    Layout = "../Shared/_MainLayoutFooter.cshtml";
+}
+
+<link rel="stylesheet" href="~/lib/css/estiloUsuario.css"/>
+
+<div class="espaco"></div>
+    <div class="box-login">
+        <h1 class="title_login"> Login</h1>
+        <div class="text-danger">
+        <form method="post" class="form login">
+            <div class="form_field">
+                <label ><span class="material-icons">email</span></label>
+                <input type="email" name="Email" class="form_input" placeholder="E-mail" required>    
+            </div>
+
+            <div class="form_field">
+                <label><span class="material-icons">lock</span></label>
+                <input name="Senha" type="password" class="form_input" placeholder="Senha" required>    
+            </div>
+
+            <div class="form_field" id="bot">
+                <input type="submit" id="salvar" value="Salvar"/>
+                <a asp-page="../Index" id="cancelar">Cancelar</a>
+            </div>
+        </form>
+        <p class="resgatar-senha">Bora começar</p>
+    </div>
+  

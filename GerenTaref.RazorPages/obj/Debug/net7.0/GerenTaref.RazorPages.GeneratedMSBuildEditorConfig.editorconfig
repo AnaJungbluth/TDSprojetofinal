@@ -9,77 +9,109 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = GerenTaref.RazorPages
 build_property.RootNamespace = GerenTaref.RazorPages
-build_property.ProjectDir = D:\GitHub\pratica_tds\GerenTaref.RazorPages\
+build_property.ProjectDir = C:\Users\Ana JungBlhut\OneDrive\Documentos\Nova pasta (2)\pratica_tds\GerenTaref.RazorPages\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\GitHub\pratica_tds\GerenTaref.RazorPages
+build_property.MSBuildProjectDirectory = C:\Users\Ana JungBlhut\OneDrive\Documentos\Nova pasta (2)\pratica_tds\GerenTaref.RazorPages
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/GitHub/pratica_tds/GerenTaref.RazorPages/Pages/Index.cshtml]
+[C:/Users/Ana JungBlhut/OneDrive/Documentos/Nova pasta (2)/pratica_tds/GerenTaref.RazorPages/Pages/Duvida.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRHV2aWRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana JungBlhut/OneDrive/Documentos/Nova pasta (2)/pratica_tds/GerenTaref.RazorPages/Pages/Funcionalidade.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRnVuY2lvbmFsaWRhZGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana JungBlhut/OneDrive/Documentos/Nova pasta (2)/pratica_tds/GerenTaref.RazorPages/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/pratica_tds/GerenTaref.RazorPages/Pages/Projeto/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamV0b1xDcmVhdGUuY3NodG1s
+[C:/Users/Ana JungBlhut/OneDrive/Documentos/Nova pasta (2)/pratica_tds/GerenTaref.RazorPages/Pages/Shared/_MainFooter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9NYWluRm9vdGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/pratica_tds/GerenTaref.RazorPages/Pages/Projeto/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamV0b1xEZWxldGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/GitHub/pratica_tds/GerenTaref.RazorPages/Pages/Projeto/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamV0b1xFZGl0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/GitHub/pratica_tds/GerenTaref.RazorPages/Pages/Projeto/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamV0b1xJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/GitHub/pratica_tds/GerenTaref.RazorPages/Pages/Shared/_MainLayout.cshtml]
+[C:/Users/Ana JungBlhut/OneDrive/Documentos/Nova pasta (2)/pratica_tds/GerenTaref.RazorPages/Pages/Shared/_MainLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9NYWluTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/pratica_tds/GerenTaref.RazorPages/Pages/Shared/_MainMenuPartialPage.cshtml]
+[C:/Users/Ana JungBlhut/OneDrive/Documentos/Nova pasta (2)/pratica_tds/GerenTaref.RazorPages/Pages/Shared/_MainLayoutFooter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9NYWluTGF5b3V0Rm9vdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana JungBlhut/OneDrive/Documentos/Nova pasta (2)/pratica_tds/GerenTaref.RazorPages/Pages/Shared/_MainMenuPartialPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9NYWluTWVudVBhcnRpYWxQYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/pratica_tds/GerenTaref.RazorPages/Pages/Tarefa/Create.cshtml]
+[C:/Users/Ana JungBlhut/OneDrive/Documentos/Nova pasta (2)/pratica_tds/GerenTaref.RazorPages/Pages/Tarefa/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFyZWZhXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/pratica_tds/GerenTaref.RazorPages/Pages/Tarefa/Delete.cshtml]
+[C:/Users/Ana JungBlhut/OneDrive/Documentos/Nova pasta (2)/pratica_tds/GerenTaref.RazorPages/Pages/Tarefa/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFyZWZhXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/pratica_tds/GerenTaref.RazorPages/Pages/Tarefa/Edit.cshtml]
+[C:/Users/Ana JungBlhut/OneDrive/Documentos/Nova pasta (2)/pratica_tds/GerenTaref.RazorPages/Pages/Tarefa/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFyZWZhXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/pratica_tds/GerenTaref.RazorPages/Pages/Tarefa/Index.cshtml]
+[C:/Users/Ana JungBlhut/OneDrive/Documentos/Nova pasta (2)/pratica_tds/GerenTaref.RazorPages/Pages/Tarefa/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFyZWZhXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/pratica_tds/GerenTaref.RazorPages/Pages/Usuario/Create.cshtml]
+[C:/Users/Ana JungBlhut/OneDrive/Documentos/Nova pasta (2)/pratica_tds/GerenTaref.RazorPages/Pages/Tarefa/Shared/_MainLayoutMenuTarefa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFyZWZhXFNoYXJlZFxfTWFpbkxheW91dE1lbnVUYXJlZmEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana JungBlhut/OneDrive/Documentos/Nova pasta (2)/pratica_tds/GerenTaref.RazorPages/Pages/Tarefa/Shared/_MainMenuTarefas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFyZWZhXFNoYXJlZFxfTWFpbk1lbnVUYXJlZmFzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana JungBlhut/OneDrive/Documentos/Nova pasta (2)/pratica_tds/GerenTaref.RazorPages/Pages/Tarefa/TelasMenuTarefa/Hoje.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFyZWZhXFRlbGFzTWVudVRhcmVmYVxIb2plLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana JungBlhut/OneDrive/Documentos/Nova pasta (2)/pratica_tds/GerenTaref.RazorPages/Pages/Tarefa/TelasMenuTarefa/Mes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFyZWZhXFRlbGFzTWVudVRhcmVmYVxNZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana JungBlhut/OneDrive/Documentos/Nova pasta (2)/pratica_tds/GerenTaref.RazorPages/Pages/Tarefa/TelasMenuTarefa/Semana.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFyZWZhXFRlbGFzTWVudVRhcmVmYVxTZW1hbmEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana JungBlhut/OneDrive/Documentos/Nova pasta (2)/pratica_tds/GerenTaref.RazorPages/Pages/Tarefa/TelasMenuTarefa/Todas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFyZWZhXFRlbGFzTWVudVRhcmVmYVxUb2Rhcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana JungBlhut/OneDrive/Documentos/Nova pasta (2)/pratica_tds/GerenTaref.RazorPages/Pages/Tarefa/TelasMenuTarefa/Vencidas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFyZWZhXFRlbGFzTWVudVRhcmVmYVxWZW5jaWRhcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana JungBlhut/OneDrive/Documentos/Nova pasta (2)/pratica_tds/GerenTaref.RazorPages/Pages/Usuario/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXN1YXJpb1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/pratica_tds/GerenTaref.RazorPages/Pages/Usuario/Delete.cshtml]
+[C:/Users/Ana JungBlhut/OneDrive/Documentos/Nova pasta (2)/pratica_tds/GerenTaref.RazorPages/Pages/Usuario/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXN1YXJpb1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/pratica_tds/GerenTaref.RazorPages/Pages/Usuario/Edit.cshtml]
+[C:/Users/Ana JungBlhut/OneDrive/Documentos/Nova pasta (2)/pratica_tds/GerenTaref.RazorPages/Pages/Usuario/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXN1YXJpb1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/pratica_tds/GerenTaref.RazorPages/Pages/Usuario/Index.cshtml]
+[C:/Users/Ana JungBlhut/OneDrive/Documentos/Nova pasta (2)/pratica_tds/GerenTaref.RazorPages/Pages/Usuario/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXN1YXJpb1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/pratica_tds/GerenTaref.RazorPages/Pages/_ViewImports.cshtml]
+[C:/Users/Ana JungBlhut/OneDrive/Documentos/Nova pasta (2)/pratica_tds/GerenTaref.RazorPages/Pages/Usuario/LoginUsuario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXN1YXJpb1xMb2dpblVzdWFyaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ana JungBlhut/OneDrive/Documentos/Nova pasta (2)/pratica_tds/GerenTaref.RazorPages/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/pratica_tds/GerenTaref.RazorPages/Pages/_ViewStart.cshtml]
+[C:/Users/Ana JungBlhut/OneDrive/Documentos/Nova pasta (2)/pratica_tds/GerenTaref.RazorPages/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

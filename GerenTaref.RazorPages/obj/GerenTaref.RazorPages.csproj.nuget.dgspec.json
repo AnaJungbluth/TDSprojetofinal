@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\pratica_tds\\GerenTaref.RazorPages\\GerenTaref.RazorPages.csproj": {}
+    "C:\\Users\\Ana JungBlhut\\OneDrive\\Documentos\\Nova pasta (2)\\pratica_tds\\GerenTaref.RazorPages\\GerenTaref.RazorPages.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\pratica_tds\\GerenTaref.RazorPages\\GerenTaref.RazorPages.csproj": {
+    "C:\\Users\\Ana JungBlhut\\OneDrive\\Documentos\\Nova pasta (2)\\pratica_tds\\GerenTaref.RazorPages\\GerenTaref.RazorPages.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\pratica_tds\\GerenTaref.RazorPages\\GerenTaref.RazorPages.csproj",
+        "projectUniqueName": "C:\\Users\\Ana JungBlhut\\OneDrive\\Documentos\\Nova pasta (2)\\pratica_tds\\GerenTaref.RazorPages\\GerenTaref.RazorPages.csproj",
         "projectName": "GerenTaref.RazorPages",
-        "projectPath": "D:\\GitHub\\pratica_tds\\GerenTaref.RazorPages\\GerenTaref.RazorPages.csproj",
-        "packagesPath": "C:\\Users\\danib\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\pratica_tds\\GerenTaref.RazorPages\\obj\\",
+        "projectPath": "C:\\Users\\Ana JungBlhut\\OneDrive\\Documentos\\Nova pasta (2)\\pratica_tds\\GerenTaref.RazorPages\\GerenTaref.RazorPages.csproj",
+        "packagesPath": "C:\\Users\\Ana JungBlhut\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ana JungBlhut\\OneDrive\\Documentos\\Nova pasta (2)\\pratica_tds\\GerenTaref.RazorPages\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\danib\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Ana JungBlhut\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -74,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,46 +1,44 @@
 @page "{id:int}"
 @model GerenTaref.RazorPages.Pages.Tarefa.Delete
+@{
+    Layout = "../Shared/_MainLayoutFooter.cshtml";
+}
 
-<style>
-    h1{
-        display: flex;
-        justify-content: center;
-        margin-bottom: 100px;
-        margin-top: 100px;
-        font-size: 50px;
-    }
-    label{
-       display: grid;
-       justify-content: center;
-       margin-bottom: 30px;
-       font-size: 22px;
-    }
+<link rel="stylesheet" href="~/lib/css/estiloTarefa.css"/>
 
-    form{
-        display: flex;
-        justify-content: center;
-    }
+<div class="container_form">
+    <h1>Criar nova Tarefa</h1>
+        <form class="form" method="post">
+            <div class="form_grupo">
+                <label  class="form_label"> Nome</label>
+                <input value="@Model.TarModel.Nome" id="input" class="form_input" readonly>
+            </div>
 
-    form input{
-        margin-right: 30px;
-    }
-</style> 
+            <div class="form_grupo">
+                <label  class="form_label"> Descrição</label>
+                <textarea cols="30" rows="3" class="form_input message_input"  readonly>@Model.TarModel.Nota</textarea>
+            </div>
 
-<div>
-    <h1>Detalhes da tarefa a ser removida</h1>
-    <label>
-        <p><strong>Data Ínicio:</strong> @Model.TarModel.DataInicio</p>
-        <p><strong>Data Final:</strong> @Model.TarModel.DataFinal</p>
-        <p><strong>Estado:</strong> @Model.TarModel.EstadoTarefa</p>
-        <p><strong>Projeto Associado:</strong> @Model.TarModel.Projeto!.Nome</p>
-        <p><strong>Responsável:</strong> @Model.TarModel.Responsavel!.NomeCompleto</p>
-    </label>
-    
-</div>
+            <div class="form_grupo">
+                <label  class="form_label"> Data Final</label>
+                <input value="@Model.TarModel.DataFinal" class="form_input" readonly>
+            </div>
 
-<form method="post">
-    <div class="form-group">
-        <input type="submit" value="Deletar" class="btn btn-danger"/>
-        <a asp-page="/Tarefa/Index" class="btn btn-primary">Cancelar</a>
+            <div class="form_grupo">
+                <label  class="text"> Status</label>
+                <input value="@Model.TarModel.EstadoTarefa" id="input" class="form_input" readonly>
+            </div>
+
+            <div class="form_grupo">
+                <label type="number" class="text"> Responsável</label>
+                <input value="@Model.TarModel.Responsavel!.NomeCompleto" id="input" class="form_input" readonly>
+            </div>
+           
+            <br/>
+            <div class="submit">
+                <input type="submit" id="deletar" class="submit_btn" value="Deletar"/>
+                <a asp-page="./Index" id="cancela" class="submit_btn">Cancelar</a>
+            </div>
+        </form>
     </div>
-</form>
+</div>

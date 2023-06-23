@@ -1,48 +1,35 @@
 @page "{id:int}"
 @model GerenTaref.RazorPages.Pages.Usuario.Edit
+@{
+    Layout = "../Shared/_MainLayoutFooter.cshtml";
+}
 
-<style>
-    div{
-        justify-content: center;
-    }
-    h1{
-        display: flex;
-        justify-content: center;
-        margin-bottom: 100px;
-        margin-top: 100px;
-        font-size: 60px;
-    }
-
-
-</style>
-
-<h1>Alterar usuário</h1>
-
-<div class="row">
-    <div class="col-md-4">
-        <form method="post">
+<div class="espaco"></div>
+    <div class="box-login">
+        <h1 class="title_login"> Alterar usuário</h1>
+        <form method="post" class="form login">
             <div asp-validation-summary="ModelOnly" class="text-dange"></div>
             <input type="hidden" asp-for="UserModel.UsuarioID">
-            <div class="form-group">
-                <label asp-for="UserModel.NomeCompleto">Nome completo</label>
-                <input asp-for="UserModel.NomeCompleto" class="form-control" required>
-                <span asp-validation-for="UserModel.NomeCompleto" class="text-dange"></span>
+
+            <div class="form_field">
+                <label asp-for="UserModel.NomeCompleto"><span class="material-icons">person</span></label>
+                <input asp-for="UserModel.NomeCompleto" type="text" class="form_input" placeholder="Nome Completo" required>    
             </div>
-            <div class="form-group">
-                <label asp-for="UserModel.Email"></label>
-                <input asp-for="UserModel.Email" class="form-control" type="email" required>
-                <span asp-validation-for="UserModel.Email" class="text-dange"></span>
+
+            <div class="form_field">
+                <label asp-for="UserModel.Email"><span class="material-icons">email</span></label>
+                <input asp-for="UserModel.Email" type="email" class="form_input" placeholder="E-mail" required>    
             </div>
-            <div class="form-group">
-                <label asp-for="UserModel.Senha"></label>
-                <input asp-for="UserModel.Senha" class="form-control" required>
-                <span asp-validation-for="UserModel.Senha" class="text-dange"></span>
+
+            <div class="form_field">
+                <label asp-for="UserModel.Senha"><span class="material-icons">lock</span></label>
+                <input asp-for="UserModel.Senha" type="password" class="form_input" placeholder="Senha" required>    
             </div>
-            <br/>
-            <div class="form-group">
-                <input type="submit" class="btn btn-success" value="Salvar"/>
-                <a asp-page="/Usuario/Index"  class="btn btn-primary">Cancelar</a>
+
+            <div class="form_field">
+                <input type="submit" id="salvar" value="Salvar"/>
+                <a asp-page="/Usuario/Index"  id="cancelar">Cancelar</a>
             </div>
         </form>
+        <p class="resgatar-senha">Alterando usuário</p>
     </div>
-</div>
