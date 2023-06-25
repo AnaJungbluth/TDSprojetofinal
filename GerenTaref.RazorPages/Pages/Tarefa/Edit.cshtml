@@ -24,7 +24,7 @@
 
             <div class="form_grupo">
                 <label asp-for="TarModel.DataFinal" class="form_label"> Data Final</label>
-                <input asp-for="TarModel.DataFinal" class="form_input"  required>
+                <input asp-for="TarModel.DataFinal" id="dataInput" onchange="validarData()" class="form_input"  required>
             </div>
 
             <div class="form_grupo">
@@ -75,3 +75,15 @@
     </div>
 </div>
 
+<script>
+function validarData() {
+  var dataInput = document.getElementById("dataInput").value;
+  var dataSelecionada = new Date(dataInput);
+  var dataAtual = new Date();
+
+  if (dataSelecionada < dataAtual) {
+    alert("A data selecionada não pode ser anterior à data atual.");
+    document.getElementById("dataInput").value = ""; // Limpar o valor do campo
+  }
+}
+</script>
