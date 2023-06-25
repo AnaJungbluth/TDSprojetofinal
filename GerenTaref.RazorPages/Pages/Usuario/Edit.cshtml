@@ -23,7 +23,7 @@
 
             <div class="form_field">
                 <label asp-for="UserModel.Senha"><span class="material-icons">lock</span></label>
-                <input asp-for="UserModel.Senha" type="password" class="form_input" placeholder="Senha" required>    
+                <input asp-for="UserModel.Senha" minlength="8" type="password" class="form_input" placeholder="Senha" required>    
             </div>
 
             <div class="form_field">
