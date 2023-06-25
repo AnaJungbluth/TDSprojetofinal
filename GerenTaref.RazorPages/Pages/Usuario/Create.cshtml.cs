@@ -24,7 +24,7 @@ namespace GerenTaref.RazorPages.Pages.Usuario
             try {
                 _context.Add(UserModel);
                 await _context.SaveChangesAsync();
-                return RedirectToPage("/Usuario/Index");
+                return RedirectToPage("../Tarefa/Index");
             } catch(DbUpdateException) {
                 return Page();
             }
