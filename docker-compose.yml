@@ -1,0 +1,10 @@
+version: '3'
+services:
+  gerenf_taref:
+    container_name: gerenf_taref
+    build:
+      context: ./GerenTaref.RazorPages
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 3380:80
