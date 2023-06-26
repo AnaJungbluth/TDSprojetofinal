@@ -19,8 +19,8 @@
             <td>@Html.DisplayFor(model => tarModel.Responsavel!.NomeCompleto)</td>
             <td>@Html.DisplayFor(model => tarModel.DataFinal)</td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@tarModel.TarefaID" title="editar" ><span id="editar" class="material-symbols-outlined">edit</span></a>
-                <a asp-page="./Delete" asp-route-id="@tarModel.TarefaID" title="deletar"><span id="deletar" class="material-symbols-outlined">delete</span></a>
+                <a asp-page="../Edit" asp-route-id="@tarModel.TarefaID" title="editar" ><span id="editar" class="material-symbols-outlined">edit</span></a>
+                <a asp-page="../Delete" asp-route-id="@tarModel.TarefaID" title="deletar"><span id="deletar" class="material-symbols-outlined">delete</span></a>
             </td>
         </tr>
     }
