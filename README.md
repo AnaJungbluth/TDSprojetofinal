@@ -13,4 +13,8 @@ Modelo de negócio: Sistema de Gerenciamento de Tarefas utilizando Docker.
 
 
 ## Utilização:
+No terminal do projeto de o seguinte comando:
+''' docker-compose up --build -d '''
 
+Na barra de pesquisa do navegador acesse o localhost:
+''' http://localhost:3380/ '''
